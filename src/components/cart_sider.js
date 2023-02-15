@@ -1,12 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import "./sider.css"
 import "./layout.css"
-import { Button, Divider, InputNumber, Space } from "antd"
-import { motion } from "framer-motion"
+import { Button, Divider, InputNumber } from "antd"
 import { CgClose } from "react-icons/cg"
 import { FiBox } from "react-icons/fi"
 import { FaTrash } from "react-icons/fa"
-import { MdShoppingCart } from "react-icons/md"
 
 
 const CartSider = ({toggleCart}) => {
@@ -15,7 +13,7 @@ const CartSider = ({toggleCart}) => {
   return (
     <>
       <div className="sider-header">
-        <div className="sider-icon" onClick={() => toggleCart(false)}>
+        <div className="sider-icon" onClick={() => toggleCart(false)} >
           <CgClose />
         </div>
         <p>Your Run Cart</p>

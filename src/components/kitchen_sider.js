@@ -1,7 +1,6 @@
 import React from "react"
 import "./sider.css"
 import "./layout.css"
-import { motion } from "framer-motion"
 import { CgClose } from "react-icons/cg"
 import { MdShoppingCart } from "react-icons/md"
 

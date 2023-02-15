@@ -3,10 +3,10 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
+//  * @type {import('gatsby').GatsbySSR['onRenderBody']}
 
 /**
- * @type {import('gatsby').GatsbySSR['onRenderBody']}
- */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: `en` })
-}
+//  */
+// exports.onRenderBody = ({ setHtmlAttributes }) => {
+//   setHtmlAttributes({ lang: `en` })
+// }
