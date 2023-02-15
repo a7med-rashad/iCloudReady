@@ -1,0 +1,168 @@
+.sider-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.sider-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  line-height: 48px;
+  font-size: 25px;
+  text-align: center;
+  color: #4A6585;
+  background-color: #fff;
+  border: 1px solid rgba(74, 101, 133, 0.19);
+  cursor: pointer;
+}
+
+.sider-header p {
+  font-size: 15px;
+  color: #00244D;
+}
+
+.sider-number {
+background-color: #ffd900;
+color: #052346;
+font-size: 14px;
+right: 30px;
+height: 20px;
+width: 20px;
+text-align: center;
+line-height: 20px;
+border-radius: 50%;
+border: 1px solid #fff;
+box-shadow: 1px 1px 6px #888888;
+}
+.sider-content{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.sider-content_k{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.empty-icon{
+  font-size: 80px;
+  color: #b1b7c585;
+}
+.sider-content_k h4{
+  margin: 0;
+  line-height: 1;
+  font-size: 14px;
+  color: #00244D;
+}
+.sider-content_k .empty-text{
+  line-height: 1;
+  font-size: 12px;
+  color: #637182;
+}
+.sider-content .title{
+  display: flex;
+  padding: 0 20px;
+width: 100%;
+line-height: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #00244D;
+}
+.sider-content .title div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 0;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #00244D;
+}
+.sider-content .title div p{
+margin-left: 30px;
+line-height: 0;
+padding: 0;
+}
+
+.product {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  line-height: 0;
+  justify-content: space-around;
+  font-size: 16px;
+  color: #00244D;
+}
+.product .product-icon{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 10px;
+  color: #2225276f;
+  font-size: 25px;
+  background-color: rgba(99, 113, 130, 0.17);
+  margin-right: 10px;
+}
+.product .product-text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.product h5{
+  font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+margin: 0;
+color: #00244D;
+}
+.product p{
+  font-weight: 500;
+font-size: 12px;
+line-height: 0;
+color: #637182;
+}
+
+.input-number{
+  width: 50px;
+}
+.trash-icon{
+  font-size: 25px;
+  margin-right: 10px;
+  color: #DC1C6A;
+}
+.sider-data {
+  display: flex;
+  padding: 0 20px;
+width: 100%;
+line-height: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sider-data h5{
+  font-weight: 400;
+font-size: 14px;
+color: #00244D;
+}
+.sider-data p{
+  font-weight: 400;
+font-size: 14px;
+color: #1457a3;
+}
+.primary-button{
+  margin: 10px;
+}

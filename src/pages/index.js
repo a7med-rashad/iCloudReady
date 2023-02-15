@@ -1,128 +1,168 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
+import "../components/contnet.css"
+import { VscLinkExternal } from "react-icons/vsc"
+import { TfiPlus } from "react-icons/tfi"
+import { BsGem } from "react-icons/bs"
+import { BsGearFill } from "react-icons/bs"
+import { BiMenuAltRight } from "react-icons/bi"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import { Card, Space } from "antd"
 
 const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
+  <>
+    <Layout>
+      <div className="content-container">
+        <div className="content-title">
+          <div className="title-text">
+            <h1>Get Support</h1>
+            <div>
+              <BsGem />
+            </div>
+          </div>
+          <div className="title-icon">
+            <BiMenuAltRight />
+          </div>
+        </div>
+        <Space direction="horizontal" className="all-cards">
+          <div className="card">
+            <Space direction="vertical">
+              <div className="card-img">
+                <StaticImage className="image" src="../images/photo1.png" />
+              </div>
+              <Space
+                direction="vertical"
+                className="card-data"
+                style={{ backgroundColor: "#0A488F" }}
+              >
+                <Space direction="vertical" className="card-text">
+                  <p className="one">Customer Engagement</p>
+                  <p className="two">
+                    Get your own mobile app for industry specific
+                  </p>
+                </Space>
+                <Space direction="horizontal" className="card-options">
+                  <h4>100 DTSU*</h4>
+                  <div className="card-icons">
+                    <Link to="/card_1" className="external">
+                      <VscLinkExternal />
+                    </Link>
+                    <div className="plus">
+                      <TfiPlus />
+                    </div>
+                  </div>
+                </Space>
+              </Space>
+            </Space>
+          </div>
+          <div className="card">
+            <Space direction="vertical">
+              <div className="card-img">
+                <StaticImage className="image" src="../images/photo2.png" />
+              </div>
+              <Space
+                direction="vertical"
+                className="card-data"
+                style={{ backgroundColor: "#579064" }}
+              >
+                <Space direction="vertical" className="card-text">
+                  <p className="one">Actionable Insighets</p>
+                  <p className="two">Create Dashboards</p>
+                </Space>
+                <Space direction="horizontal" className="card-options">
+                  <h4>100 DTSU*</h4>
+                  <div className="card-icons">
+                  <Link to="card_2" className="external">
+                      <VscLinkExternal />
+                    </Link>
+                    <div className="plus">
+                      <TfiPlus />
+                    </div>
+                  </div>
+                </Space>
+              </Space>
+            </Space>
+          </div>
+          <div className="card">
+            <Space direction="vertical">
+              <div className="card-img">
+                <StaticImage className="image" src="../images/photo3.png" />
+              </div>
+              <Space
+                direction="vertical"
+                className="card-data"
+                style={{ backgroundColor: "#950000" }}
+              >
+                <Space direction="vertical" className="card-text">
+                  <p className="one">Employees Productivity</p>
+                  <p className="two">
+                    KPI Builder , Work Conf,Create Oracle Requests
+                  </p>
+                </Space>
+                <Space direction="horizontal" className="card-options">
+                  <h4>50 DTSU*</h4>
+                  <div className="card-icons">
+                  <Link to="/card_3" className="external">
+                      <VscLinkExternal />
+                    </Link>
+                    <div className="plus">
+                      <TfiPlus />
+                    </div>
+                  </div>
+                </Space>
+              </Space>
+            </Space>
+          </div>
+          <div className="card">
+            <Space direction="vertical">
+              <div className="card-img">
+                <StaticImage className="image" src="../images/photo4.png" />
+              </div>
+              <Space
+                direction="vertical"
+                className="card-data"
+                style={{ backgroundColor: "#8F6C0A" }}
+              >
+                <Space direction="vertical" className="card-text">
+                  <p className="one">Operations Excellence</p>
+                  <p className="two">Tenant/lessee Managment</p>
+                </Space>
+                <Space direction="horizontal" className="card-options">
+                  <h4>100 DTSU*</h4>
+                  <div className="card-icons">
+                  <Link to="/card_4" className="external">
+                      <VscLinkExternal />
+                    </Link>
+                    <div className="plus">
+                      <TfiPlus />
+                    </div>
+                  </div>
+                </Space>
+              </Space>
+            </Space>
+          </div>
+        </Space>
+        <div className="down-data">
+          <div className="down-1">
+            <div>
+              <BsGearFill />
+            </div>
+            <p>
+              Remaining DTSUs : <span>200</span>
+            </p>
+          </div>
+          <div className="down-2">
+            <div>
+              <BsGearFill />
+            </div>
+            <p>
+              Consumed DTSUs : <span>350</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  </>
 )
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
-
 export default IndexPage
